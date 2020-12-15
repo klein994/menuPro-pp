@@ -25,8 +25,8 @@
         color-on-scroll="100" id="sectionsNav">
         <div class="container" style="justify-content: center;">
             <div class="navbar-translate">
-                <a class="navbar-brand" href="https://demos.creative-tim.com/material-kit/index.html">
-                    LOGO </a>
+                <a class="" href="#">
+                    <img src="./assets/img/logo.png" class="img-fluid" style="max-width: 80px" alt="Responsive image"> </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false"
                         aria-label="Toggle navigation">
                     <span class="sr-only">Toggle navigation</span>

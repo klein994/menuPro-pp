@@ -14903,7 +14903,7 @@ textarea {
 .navbar.navbar-transparent {
   background-color: #0d0d0d5e !important;
   box-shadow: none;
-  padding-top: 25px;
+  /*padding-top: 25px;*/
   color: #ffffff;
 }
 
