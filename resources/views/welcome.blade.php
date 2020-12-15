@@ -19,8 +19,9 @@
             letter-spacing: 0.5px;
             font-weight: 600;
         }
+
         @media (max-width: 767px) {
-            #myCarousel h4{
+            #myCarousel h4 {
                 font-size: 30px;
             }
 
@@ -212,7 +213,6 @@
         }
 
 
-
         /********************fin de slider************************/
         .grid-container {
             display: grid;
@@ -281,7 +281,9 @@
                                             <p></p>
                                             <a href="#">BUY NOW</a></div>
                                         <div class="col-md-6 col-12 order-md-2 order-1"><img style=""
-                                                src="./assets/img/slider/bg.jpg" class="mx-auto rounded" alt="slide"></div>
+                                                                                             src="./assets/img/slider/bg.jpg"
+                                                                                             class="mx-auto rounded"
+                                                                                             alt="slide"></div>
                                     </div>
 
                                 </div>
@@ -296,7 +298,8 @@
                                             <p></p>
                                             <a href="#">BUY NOW</a></div>
                                         <div class="col-md-6 col-12 order-md-2 order-1"><img
-                                                src="./assets/img/slider/bg2.jpg" class="mx-auto rounded" alt="slide"></div>
+                                                src="./assets/img/slider/bg2.jpg" class="mx-auto rounded" alt="slide">
+                                        </div>
                                     </div>
 
                                 </div>
@@ -311,7 +314,8 @@
                                             <p></p>
                                             <a href="#">BUY NOW</a></div>
                                         <div class="col-md-6 col-12 order-md-2 order-1"><img
-                                                src="./assets/img/slider/bg3.jpg" class="mx-auto rounded" alt="slide"></div>
+                                                src="./assets/img/slider/bg3.jpg" class="mx-auto rounded" alt="slide">
+                                        </div>
                                     </div>
 
                                 </div>
@@ -359,7 +363,7 @@
                                             <li class="nav-item">
                                                 <a class="nav-link" href="#tasks-1" role="tab" data-toggle="tab">
                                                     <i class="material-icons">list</i>
-                                                    Especialidad
+                                                    Favoritos
                                                 </a>
                                             </li>
                                         </ul>
@@ -415,36 +419,43 @@
                 </div>
             </div>
         </div>
-        <div class="section " style="padding: 0">
-            <div class="container">
 
-                <div class="card " style="margin-top:0">
-                    <div class="col-md-12">
-                        <h1>hola</h1>
+<div style="background: rgb(255,255,255);
+background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(156,39,176,1) 0%, rgba(255,255,255,0) 100%) center center no-repeat;margin-bottom: 40px;" class="col-md-6 ">
+
+    <h3 style="font-weight: bold;color: white;text-shadow: 2px 2px 5px rgba(156,39,176,1)">Aqui va la categoria</h3></div>
+
+
+
+        <div class="section " style="padding: 0">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card " style="margin-top:0">
+                            <div class="col-md-12">
+                                <h1>hola</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card " style="margin-top:0">
+                            <div class="col-md-12">
+                                <h1>hola</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card " style="margin-top:0">
+                            <div class="col-md-12">
+                                <h1>hola</h1>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="section " style="padding: 0">
-            <div class="container">
 
-                <div class="card " style="margin-top:0">
-                    <div class="col-md-12">
-                        <h1>hola</h1>
-                    </div>
-                </div>
-            </div>
         </div>
-        <div class="section " style="padding: 0">
-            <div class="container">
 
-                <div class="card " style="margin-top:0">
-                    <div class="col-md-12">
-                        <h1>hola</h1>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- Classic Modal -->
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
