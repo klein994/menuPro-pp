@@ -81,8 +81,8 @@
 
         #myCarousel .carousel-item {
             height: 100%;
-            height: 490px;
-            top: 100px;
+            height: 500px;
+            top: 110px;
         }
 
         #myCarousel {
