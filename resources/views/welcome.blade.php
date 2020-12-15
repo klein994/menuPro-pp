@@ -2,40 +2,264 @@
 
 @section('contenido')
     <style>
+        /****************slider**************/
+        #myCarousel .carousel-item .mask {
+            padding: 30px;
+            height: 100%;
+            width: 100%;
+            background-attachment: fixed;
+
+        }
+
+        #myCarousel h4 {
+            font-size: 50px;
+            margin-bottom: 15px;
+            color: #FFF;
+            line-height: 100%;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+        @media (max-width: 767px) {
+            #myCarousel h4{
+                font-size: 30px;
+            }
+
+        }
+
+        #myCarousel p {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #d5d5d5;
+        }
+
+        #myCarousel .carousel-item a {
+            background: #F47735;
+            font-size: 14px;
+            color: #FFF;
+            padding: 13px 32px;
+            display: inline-block;
+        }
+
+        #myCarousel .carousel-item a:hover {
+            background: #394fa2;
+            text-decoration: none;
+        }
+
+        #myCarousel .carousel-item h4 {
+            -webkit-animation-name: fadeInLeft;
+            animation-name: fadeInLeft;
+        }
+
+        #myCarousel .carousel-item p {
+            -webkit-animation-name: slideInRight;
+            animation-name: slideInRight;
+        }
+
+        #myCarousel .carousel-item a {
+            -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp;
+        }
+
+        #myCarousel .carousel-item .mask img {
+            -webkit-animation-name: slideInRight;
+            animation-name: slideInRight;
+            display: block;
+            height: auto;
+            max-width: 100%;
+        }
+
+        #myCarousel h4, #myCarousel p, #myCarousel a, #myCarousel .carousel-item .mask img {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1.2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+        }
+
+        #myCarousel .container {
+            max-width: 100%;
+        }
+
+        #myCarousel .carousel-item {
+            height: 100%;
+            height: 490px;
+            top: 100px;
+        }
+
+        #myCarousel {
+            position: relative;
+            z-index: 0;
+            background: rgb(255, 255, 255);
+            background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(156, 39, 176, 1) 51%) center center no-repeat;
+            background-size: cover;
+        }
+
+
+        .carousel-fade .carousel-item {
+            opacity: 0;
+            -webkit-transition-duration: .6s;
+            transition-duration: .6s;
+            -webkit-transition-property: opacity;
+            transition-property: opacity
+        }
+
+        .carousel-fade .carousel-item-next.carousel-item-left, .carousel-fade .carousel-item-prev.carousel-item-right, .carousel-fade .carousel-item.active {
+            opacity: 1
+        }
+
+        .carousel-fade .carousel-item-left.active, .carousel-fade .carousel-item-right.active {
+            opacity: 0
+        }
+
+        .carousel-fade .carousel-item-left.active, .carousel-fade .carousel-item-next, .carousel-fade .carousel-item-prev, .carousel-fade .carousel-item-prev.active, .carousel-fade .carousel-item.active {
+            -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
+            transform: translateX(0)
+        }
+
+        @supports (transform-style:preserve-3d) {
+            .carousel-fade .carousel-item-left.active, .carousel-fade .carousel-item-next, .carousel-fade .carousel-item-prev, .carousel-fade .carousel-item-prev.active, .carousel-fade .carousel-item.active {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0)
+            }
+        }
+
+        .carousel-fade .carousel-item-left.active, .carousel-fade .carousel-item-next, .carousel-fade .carousel-item-prev, .carousel-fade .carousel-item-prev.active, .carousel-fade .carousel-item.active {
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+
+
+        @-webkit-keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(-100%, 0, 0);
+                transform: translate3d(-100%, 0, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @-webkit-keyframes fadeInUp {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                -webkit-transform: translate3d(0, 100%, 0);
+                transform: translate3d(0, 100%, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @-webkit-keyframes slideInRight {
+            from {
+                -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+                visibility: visible;
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                -webkit-transform: translate3d(100%, 0, 0);
+                transform: translate3d(100%, 0, 0);
+                visibility: visible;
+            }
+
+            to {
+                -webkit-transform: translate3d(0, 0, 0);
+                transform: translate3d(0, 0, 0);
+            }
+        }
+
+
+
+        /********************fin de slider************************/
         .grid-container {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-template-rows: 1fr 1fr 1fr;
             gap: 10px 10px;
-            grid-template-areas:
-                "pepe pepe pepe2 pepe3"
-                "pepe6 pepe4 pepe4 pepe3"
-                "pepe8 pepe7 pepe5 pepe5";
+            grid-template-areas: "pepe pepe pepe2 pepe3" "pepe6 pepe4 pepe4 pepe3" "pepe8 pepe7 pepe5 pepe5";
         }
 
-        .pepe { grid-area: pepe;
-        background-image: url("./assets/img/slider/bg3.jpg");
+        .pepe {
+            grid-area: pepe;
+            background-image: url("./assets/img/slider/bg3.jpg");
         }
 
-        .pepe2 { grid-area: pepe2;        background-image: url("./assets/img/slider/bg3.jpg");
+        .pepe2 {
+            grid-area: pepe2;
+            background-image: url("./assets/img/slider/bg3.jpg");
         }
 
-        .pepe3 { grid-area: pepe3;        background-image: url("./assets/img/slider/bg3.jpg");
+        .pepe3 {
+            grid-area: pepe3;
+            background-image: url("./assets/img/slider/bg3.jpg");
         }
 
-        .pepe4 { grid-area: pepe4;         background-image: url("./assets/img/slider/bg3.jpg");
+        .pepe4 {
+            grid-area: pepe4;
+            background-image: url("./assets/img/slider/bg3.jpg");
         }
 
-        .pepe5 { grid-area: pepe5;         background-image: url("./assets/img/slider/bg3.jpg");
+        .pepe5 {
+            grid-area: pepe5;
+            background-image: url("./assets/img/slider/bg3.jpg");
         }
 
-        .pepe6 { grid-area: pepe6;         background-image: url("./assets/img/slider/bg3.jpg");
+        .pepe6 {
+            grid-area: pepe6;
+            background-image: url("./assets/img/slider/bg3.jpg");
         }
 
-        .pepe7 { grid-area: pepe7;         background-image: url("./assets/img/slider/bg3.jpg");
+        .pepe7 {
+            grid-area: pepe7;
+            background-image: url("./assets/img/slider/bg3.jpg");
         }
 
-        .pepe8 { grid-area: pepe8;         background-image: url("./assets/img/slider/bg3.jpg");
+        .pepe8 {
+            grid-area: pepe8;
+            background-image: url("./assets/img/slider/bg3.jpg");
         }
 
     </style>
@@ -45,56 +269,59 @@
                 <div class="row" style="margin: 0">
 
                     <!-- Carousel Card -->
-                    <div class="card card-raised card-carousel pplc" style="margin: 0;padding: 0;border-radius: 0;">
-                        <div id="carouselExampleIndicators" class="carousel slide pplc" data-ride="carousel"
-                             data-interval="3000">
-                            {{--                            <ol class="carousel-indicators">--}}
-                            {{--                                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>--}}
-                            {{--                                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>--}}
-                            {{--                                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>--}}
-                            {{--                            </ol>--}}
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img class="d-block w-100" src="./assets/img/slider/bg.jpg" alt="First slide">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h4>
-                                            <i class="material-icons">location_on</i>
-                                            Yellowstone National Park, United States
-                                        </h4>
+                    <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="mask flex-center">
+
+                                    <div class="row align-items-center">
+                                        <div class="col-md-6 col-12 order-md-1 order-2">
+                                            <h4>Present your <br>
+                                                awesome product</h4>
+                                            <p></p>
+                                            <a href="#">BUY NOW</a></div>
+                                        <div class="col-md-6 col-12 order-md-2 order-1"><img style=""
+                                                src="./assets/img/slider/bg.jpg" class="mx-auto rounded" alt="slide"></div>
                                     </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="./assets/img/slider/bg2.jpg" alt="Second slide">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h4>
-                                            <i class="material-icons">location_on</i>
-                                            Somewhere Beyond, United States
-                                        </h4>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img class="d-block w-100" src="./assets/img/slider/bg3.jpg" alt="Third slide">
-                                    <div class="carousel-caption d-none d-md-block">
-                                        <h4>
-                                            <i class="material-icons">location_on</i>
-                                            Yellowstone National Park, United States
-                                        </h4>
-                                    </div>
+
                                 </div>
                             </div>
-                            {{--                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">--}}
-                            {{--                                <i class="material-icons">keyboard_arrow_left</i>--}}
-                            {{--                                <span class="sr-only">Previous</span>--}}
-                            {{--                            </a>--}}
-                            {{--                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">--}}
-                            {{--                                <i class="material-icons">keyboard_arrow_right</i>--}}
-                            {{--                                <span class="sr-only">Next</span>--}}
-                            {{--                            </a>--}}
+                            <div class="carousel-item">
+                                <div class="mask flex-center">
+
+                                    <div class="row align-items-center">
+                                        <div class="col-md-6 col-12 order-md-1 order-2">
+                                            <h4>Present your <br>
+                                                awesome product</h4>
+                                            <p></p>
+                                            <a href="#">BUY NOW</a></div>
+                                        <div class="col-md-6 col-12 order-md-2 order-1"><img
+                                                src="./assets/img/slider/bg2.jpg" class="mx-auto rounded" alt="slide"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <div class="mask flex-center">
+
+                                    <div class="row align-items-center">
+                                        <div class="col-md-6 col-12 order-md-1 order-2">
+                                            <h4>Present your <br>
+                                                awesome product</h4>
+                                            <p></p>
+                                            <a href="#">BUY NOW</a></div>
+                                        <div class="col-md-6 col-12 order-md-2 order-1"><img
+                                                src="./assets/img/slider/bg3.jpg" class="mx-auto rounded" alt="slide"></div>
+                                    </div>
+
+                                </div>
+                            </div>
                         </div>
+                    {{--                        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a> </div>--}}
+                    <!--slide end-->
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <main class="container bg-white">
 
@@ -116,7 +343,8 @@
                                                             color-classes: "nav-pills-primary", "nav-pills-info", "nav-pills-success", "nav-pills-warning","nav-pills-danger"
                                                         -->
                                             <li class="nav-item">
-                                                <a class="nav-link active" href="#dashboard-1" role="tab" data-toggle="tab">
+                                                <a class="nav-link active" href="#dashboard-1" role="tab"
+                                                   data-toggle="tab">
                                                     <i class="material-icons">dashboard</i>
                                                     Categorías
                                                 </a>
@@ -142,14 +370,22 @@
                                     <div class="tab-content text-center">
                                         <div class="tab-pane active" id="dashboard-1">
                                             <div class="grid-container" style="color: white">
-                                                <div class="pepe"><i style="font-size: 50px" class="material-icons">fastfoot</i><p>pepe</p></div>
-                                                <div class="pepe2"><i style="font-size: 50px" class="material-icons">dashboard</i><p>pepe</p></div>
-                                                <div class="pepe3"><i style="font-size: 50px" class="material-icons">dashboard</i><p>pepe</p></div>
-                                                <div class="pepe4"><i style="font-size: 50px" class="material-icons">dashboard</i><p>pepe</p></div>
-                                                <div class="pepe5"><i style="font-size: 50px" class="material-icons">dashboard</i><p>pepe</p></div>
-                                                <div class="pepe6"><i style="font-size: 50px" class="material-icons">dashboard</i><p>pepe</p></div>
-                                                <div class="pepe7"><i style="font-size: 50px" class="material-icons">dashboard</i><p>pepe</p></div>
-                                                <div class="pepe8"><i style="font-size: 50px" class="material-icons">dashboard</i><p>pepe</p></div>
+                                                <div class="pepe"><i style="font-size: 50px" class="material-icons">grade</i>
+                                                    <p>pepe</p></div>
+                                                <div class="pepe2"><i style="font-size: 50px" class="material-icons">local_bar</i>
+                                                    <p>pepe</p></div>
+                                                <div class="pepe3"><i style="font-size: 50px" class="material-icons">local_dining</i>
+                                                    <p>pepe</p></div>
+                                                <div class="pepe4"><i style="font-size: 50px" class="material-icons">room_service</i>
+                                                    <p>pepe</p></div>
+                                                <div class="pepe5"><i style="font-size: 50px" class="material-icons">restaurant</i>
+                                                    <p>pepe</p></div>
+                                                <div class="pepe6"><i style="font-size: 50px" class="material-icons">ramen_dining</i>
+                                                    <p>pepe</p></div>
+                                                <div class="pepe7"><i style="font-size: 50px" class="material-icons">fastfood</i>
+                                                    <p>pepe</p></div>
+                                                <div class="pepe8"><i style="font-size: 50px" class="material-icons">dinner_dining</i>
+                                                    <p>pepe</p></div>
                                             </div>
                                         </div>
                                         <div class="tab-pane" id="schedule-1">
@@ -250,7 +486,8 @@
                                 </div>
                                 <div class="input-group">
                                     <div class="input-group-prepend">
-                      <span class="input-group-text"> <i class="material-icons">lock_outline</i> </span>
+                                        <span class="input-group-text"> <i
+                                                class="material-icons">lock_outline</i> </span>
                                     </div>
                                     <input type="password" class="form-control" placeholder="Password"
                                            autocomplete="">
