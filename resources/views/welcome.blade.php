@@ -427,33 +427,31 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(156,39,176,1) 0
 
 
 
-        <div class="section " style="padding: 0">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card " style="margin-top:0">
-                            <div class="col-md-12">
-                                <h1>hola</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card " style="margin-top:0">
-                            <div class="col-md-12">
-                                <h1>hola</h1>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card " style="margin-top:0">
-                            <div class="col-md-12">
-                                <h1>hola</h1>
-                            </div>
-                        </div>
-                    </div>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="/public/assets/img/slider/bg.jpg" alt="First slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="..." alt="Second slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="..." alt="Third slide">
                 </div>
             </div>
-
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
         </div>
 
 
@@ -505,15 +503,113 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(156,39,176,1) 0
                                 </div>
                             </div>
                             <div class="footer text-center">
-                                <a href="javascript:;" class="btn btn-primary btn-link btn-wd btn-lg">Get
-                                    Started</a>
+                                <a href="javascript:;" class="btn btn-primary btn-link btn-wd btn-lg">Iniciar sesión
+                                    </a>
+                                <a href="#modal2" data-toggle="modal" class="btn btn-primary btn-link btn-wd btn-lg" data-target="#modal2">No tienes una cuneta aún?
+                                    </a>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+<!--- Modal sign in--->
+        <div class="modal fade" id="modal2" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="card card-login m-0">
+                        <form class="form">
+                            <div class="card-header card-header-primary text-center">
+                                <h4 class="card-title">Registrate</h4>
+                                <div class="social-line">
+                                    <a href="javascript:;" class="btn btn-just-icon btn-link">
+                                        <i class="fa fa-facebook-square"></i>
+                                    </a>
+                                    <a href="javascript:;" class="btn btn-just-icon btn-link">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="javascript:;" class="btn btn-just-icon btn-link">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="description text-center">Llena los campos</p>
+                            <div class="card-body px-3">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
 
+                                    </div>
+                                    <input type="text" maxlength="20" class="form-control" placeholder="Nombre" required>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                    </div>
+                                    <input type="text" maxlength="20" class="form-control" placeholder="Apellido" required>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                        </div>
+                                    <input type="email" class="form-control" placeholder="Email" required>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                    </div>
+                                    <input type="password" class="form-control" placeholder="Contraseña"
+                                           autocomplete="" required>
+                                </div>
+                            </div>
+                            <div class="checkbox ml-3">
+                                <label>Responsable inscripto:</label>
+                                <label for="optInscriptoSi">Si </label>  <input type="radio" name="optInscripto" id="optInscriptoSi" role="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false">
+                                <label for="optInscriptoNo">No </label> <input type="radio" name="optInscripto" id="optInscriptoNo" role="button" checked >
+                            </div>
+                            <div id="collapseOne" class="collapse accordion-body text-center px-3">
+                                <div class="card-body">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+
+                                        </div>
+                                        <input type="text" maxlength="50" class="form-control" placeholder="Razon Social" required>
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+
+                                        </div>
+                                        <input type="text" maxlength="11" class="form-control" placeholder="CUIL/CUIT" required>
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        </div>
+                                        <input type="email" maxlength="30" class="form-control" placeholder="Direccion fiscal" required>
+
+                                     </div>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        </div>
+                                        <input type="number" maxlength="5" class="form-control" placeholder="Altura" required>
+                                        <input type="text" maxlength="5" class="form-control" placeholder="Piso">
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        </div>
+                                        <input type="tel" maxlength="19" class="form-control" placeholder="Telefono"
+                                               required>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="footer text-center">
+                               <button type="submit" class="border-0"> <a href="javascript:;" class="btn btn-primary btn-link btn-wd btn-lg" >Enviar
+                                    </a> </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
 
