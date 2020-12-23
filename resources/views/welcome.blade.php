@@ -505,15 +505,113 @@ background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(156,39,176,1) 0
                                 </div>
                             </div>
                             <div class="footer text-center">
-                                <a href="javascript:;" class="btn btn-primary btn-link btn-wd btn-lg">Get
-                                    Started</a>
+                                <a href="javascript:;" class="btn btn-primary btn-link btn-wd btn-lg">Iniciar sesión
+                                    </a>
+                                <a href="#modal2" data-toggle="modal" class="btn btn-primary btn-link btn-wd btn-lg" data-target="#modal2">No tienes una cuneta aún?
+                                    </a>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
+<!--- Modal sign in--->
+        <div class="modal fade" id="modal2" tabindex="-1" role="dialog">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="card card-login m-0">
+                        <form class="form">
+                            <div class="card-header card-header-primary text-center">
+                                <h4 class="card-title">Registrate</h4>
+                                <div class="social-line">
+                                    <a href="javascript:;" class="btn btn-just-icon btn-link">
+                                        <i class="fa fa-facebook-square"></i>
+                                    </a>
+                                    <a href="javascript:;" class="btn btn-just-icon btn-link">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                    <a href="javascript:;" class="btn btn-just-icon btn-link">
+                                        <i class="fa fa-google-plus"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="description text-center">Llena los campos</p>
+                            <div class="card-body px-3">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
 
+                                    </div>
+                                    <input type="text" maxlength="20" class="form-control" placeholder="Nombre" required>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                    </div>
+                                    <input type="text" maxlength="20" class="form-control" placeholder="Apellido" required>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                        </div>
+                                    <input type="email" class="form-control" placeholder="Email" required>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+
+                                    </div>
+                                    <input type="password" class="form-control" placeholder="Contraseña"
+                                           autocomplete="" required>
+                                </div>
+                            </div>
+                            <div class="checkbox ml-3">
+                                <label>Responsable inscripto:</label>
+                                <label for="optInscriptoSi">Si </label>  <input type="radio" name="optInscripto" id="optInscriptoSi" role="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false">
+                                <label for="optInscriptoNo">No </label> <input type="radio" name="optInscripto" id="optInscriptoNo" role="button" checked >
+                            </div>
+                            <div id="collapseOne" class="collapse accordion-body text-center px-3">
+                                <div class="card-body">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+
+                                        </div>
+                                        <input type="text" maxlength="50" class="form-control" placeholder="Razon Social" required>
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+
+                                        </div>
+                                        <input type="text" maxlength="11" class="form-control" placeholder="CUIL/CUIT" required>
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        </div>
+                                        <input type="email" maxlength="30" class="form-control" placeholder="Direccion fiscal" required>
+
+                                     </div>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        </div>
+                                        <input type="number" maxlength="5" class="form-control" placeholder="Altura" required>
+                                        <input type="text" maxlength="5" class="form-control" placeholder="Piso">
+                                    </div>
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                        </div>
+                                        <input type="tel" maxlength="19" class="form-control" placeholder="Telefono"
+                                               required>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="footer text-center">
+                               <button type="submit" class="border-0"> <a href="javascript:;" class="btn btn-primary btn-link btn-wd btn-lg" >Enviar
+                                    </a> </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
 
